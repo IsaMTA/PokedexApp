@@ -1,0 +1,59 @@
+@import "../../../assets/styles/color.scss";
+
+.container{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+//Tabla y celdas
+
+table{
+    min-width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: $white
+}
+
+.mat-header-cell{
+    text-align: center;
+    font-size: x-large;
+    color: $green;
+    text-shadow: 1px 2px black;
+    background-color: purple;
+}
+
+.mat-cell{
+    color: $black;
+    font-weight: bold;
+    font-size: medium;
+    border-bottom: solid 2px $grey;
+}
+
+.mat-cell::first-letter{
+    text-transform: uppercase;
+}
+
+.mat-row:hover{
+    cursor: pointer;
+    box-shadow: $purple 3px 3px 6px 0px inset, $purple -3px -3px 6px 1px inset;
+}
+
+//Filtro
+
+input{
+    color: $white;
+}
+
+::ng-deep.mat-form-field-label{
+    color: $orange !important;
+    text-align: center;
+}
+
+//Paginator
+
+::ng-deep.mat-paginator{
+    width: 80%;
+    margin: auto;
+}
+

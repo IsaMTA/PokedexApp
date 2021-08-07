@@ -1,0 +1,55 @@
+<mat-card class="example-card">
+</mat-card>
+
+<div class="container">
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="2" [rowspan]="4" id="imagen">
+        <img mat-card-image src="{{pkImg}}" alt="Foto de {{pokemon.name}}">
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1" id="title" class="principal">
+        <img src="../../../assets/img/pokeball.png" alt="pokeball" width="50" height="50">
+        N° {{pokemon.id}} {{pokemon.name}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" id="title" class="type">
+        TYPE
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" class="type">
+        <ul class="list-group list-group-horizontal"> <!--Desplegango los tipos-->
+            <li class="list-group-item active"*ngFor="let type of pokemon.types">{{type.type.name}}</li>
+        </ul>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]="'lightblue'" id="title" >
+        HEIGHT
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" class="data">
+        {{pokemon.height}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]="'lightblue'" id="title">
+        WEIGHT
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" class="data">
+        {{pokemon.weight}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="2" id="abilities">
+         <table class="table table-light">
+            <thead>
+                <tr><th><h3>ABILITIES</h3></th></tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ability of pokemon.abilities">
+                    <td>{{ability.ability.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="3" [style.background]="'lightgreen'" id="games">
+        <h3>APPEARENCES</h3>
+        <mat-chip-list aria-label="Color selection">
+            <mat-chip *ngFor="let game of pokemon.game_indices" selected>
+              {{game.version.name}}
+            </mat-chip>
+        </mat-chip-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+     

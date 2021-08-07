@@ -1,0 +1,83 @@
+@import "../../../assets/styles/color.scss";
+
+//Card
+.container{
+    width: 100%;
+}
+
+#imagen{
+    background-image: url('../../../assets/img/vintage-wallpaper.png');
+    border: 10px solid $marco;
+    border-radius: solid 5px;
+    margin-right: 15px;
+}
+
+.mat-grid-list{
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.mat-card{
+    background-color: $black;
+}
+
+//Nombre
+.mat-grid-tile{
+    background-color: $name;
+}
+
+.principal{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#title{
+    font-size: large;
+}
+
+h3{
+    font-weight: bolder;
+    padding: 10px;
+}
+
+//Tipos
+li{
+    list-style: none;
+}
+
+li::first-letter{
+    text-transform: uppercase;
+}
+
+ul{
+    text-align: center;
+}
+
+.data{
+    background-color: $orange;
+}
+
+.type{
+    background-color: $type;
+}
+
+//Abilities
+#abilities{
+    background-color: $abil;
+}
+
+table{
+    background-color: rgba($color: #8b252588, $alpha: 0.5);
+    width: 80%;
+}
+
+h3{
+    font-size: x-large;
+}
+
+td{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: medium;
+}

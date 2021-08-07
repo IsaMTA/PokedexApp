@@ -1,0 +1,20 @@
+@import "../../../assets/styles/color.scss";
+
+.mat-toolbar{
+    background-color: $red;
+}
+
+img:hover{
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+pre{
+    font-size: xx-large;
+}
+
+.img-container{
+   padding-top: 15px;
+   margin-bottom: 5px;
+}
